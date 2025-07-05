@@ -17,6 +17,10 @@
 	<body class="body_center">
 
         <div class="navigation_bar">
+            <div class="glass-container"></div>
+            <!-- <div class="glass-tint"></div> -->
+            <!-- <div class="glass-shine"></div> -->
+            
             <a href="https://joshnegreanu.com" class="nav_link">HOME</a>
             <a href="files/resume.pdf" target="_blank" class="nav_link">RESUME</a>
             <a href="https://github.com/JoshNegreanu" target="_blank" class="nav_link">GITHUB</a>
@@ -34,9 +38,8 @@
         </div>
 
         <footer class="footer">
-            <div class="footer_text" style="float: left;">WEBSITE HAND CRAFTED BY JOSH NEGREANU. HOSTED IN GITHUB PAGES. CODE VIEWABLE ON GITHUB. © 2024</div>
-            
-            <a class="footer_link" style="text-transform: lowercase; float: right;" href="mailto:negreanj@oregonstate.edu">negreanj@oregonstate.edu</a>
+            <div class="footer_text" style="float: left;">WEBSITE HAND CRAFTED BY JOSH NEGREANU. HOSTED IN GITHUB PAGES. CODE VIEWABLE ON GITHUB. © 2025</div>
+            <a class="footer_link" style="text-transform: lowercase; float: right;" href="mailto:joshua.negreanu@gmail.com">joshua.negreanu@gmail.com</a>
         </footer>
 
         <svg class="circle" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700"><defs><radialGradient id="gggrain-gradient" r="1.1">
@@ -60,6 +63,63 @@
 
 
 	</body>
+
+    <svg style="display: none">
+        <filter
+          id="glass-distortion"
+          x="0%"
+          y="0%"
+          width="100%"
+          height="100%"
+          filterUnits="objectBoundingBox"
+        >
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.001 0.005"
+            numOctaves="2"
+            seed="17"
+            result="turbulence"
+          />
+          <!-- Liked Seeds: 5, 14, 17 -->
+  
+          <feComponentTransfer in="turbulence" result="mapped">
+            <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
+            <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
+            <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
+          </feComponentTransfer>
+  
+          <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+  
+          <feSpecularLighting
+            in="softMap"
+            surfaceScale="5"
+            specularConstant="1"
+            specularExponent="100"
+            lighting-color="white"
+            result="specLight"
+          >
+            <fePointLight x="-200" y="-200" z="300" />
+          </feSpecularLighting>
+  
+          <feComposite
+            in="specLight"
+            operator="arithmetic"
+            k1="0"
+            k2="1"
+            k3="1"
+            k4="0"
+            result="litImage"
+          />
+  
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="softMap"
+            scale="200"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+      </svg>
 
     <script type="text/javascript" src="cursor.js"></script>
 

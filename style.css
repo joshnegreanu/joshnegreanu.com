@@ -45,17 +45,48 @@ body {
 	align-self: flex-start;
     position: fixed;
     width: 100%;
-	transition: all 0.3s ease;
+	cursor: initial;
 }
 
-.navigation_bar:hover {
-	cursor: initial;
-	-webkit-backdrop-filter: blur(30px);
-	-moz-backdrop-filter: blur(30px);
-	-ms-backdrop-filter: blur(30px);
-	-o-backdrop-filter: blur(30px);
-	backdrop-filter: blur(30px);
+.glass-container {
+	position: absolute;
+	z-index: 0;
+	inset: 0;
+
+	backdrop-filter: blur(15px);
+	filter: url(#glass-distortion);
+	overflow: hidden;
+	isolation: isolate;
 }
+
+.glass-tint {
+	z-index: 0;
+	position: absolute;
+	inset: 0;
+}
+
+.glass-tint:hover {
+	background: rgba(255, 255, 255, 0.25);
+}
+  
+.glass-shine {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+  
+	overflow: hidden;
+  
+	box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.5),
+	  inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* .glass-container:hover {
+	cursor: initial;
+	backdrop-filter: blur(10px);
+	filter: url(#glass-distortion);
+	overflow: hidden;
+	isolation: isolate;
+} */
 
 /* nav link */
 a.nav_link {
@@ -148,6 +179,7 @@ a.nav_link_dark:hover::after {
 	font-size: 14px;
 	margin: 20px;
 	text-decoration: none;
+	position: relative;
 }
 
 /* footer text link */
