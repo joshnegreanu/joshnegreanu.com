@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>home // josh negreanu</title>
+
+		<link rel="stylesheet" href="style.css" media="screen">
+        <link rel="icon" href="images/favicon.ico">
+
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="expires" content="0">
+	</head>
+
+	<body class="body_center">
+
+        <div class="navigation_bar">
+            <div class="glass-container"></div>
+            <!-- <div class="glass-tint"></div> -->
+            <!-- <div class="glass-shine"></div> -->
+            
+            <a href="https://joshnegreanu.com" class="nav_link">HOME</a>
+            <a href="files/resume.pdf" target="_blank" class="nav_link">RESUME</a>
+            <a href="https://github.com/JoshNegreanu" target="_blank" class="nav_link">GITHUB</a>
+            <a href="https://linkedin.com/in/joshnegreanu/" target="_blank" class="nav_link">LINKEDIN</a>
+            <!-- <a href="https://joshnegreanu.com/ai-research" class="nav_link">AI RESEARCH</a> -->
+
+            <a href="https://linktr.ee/joshnegreanu" target="_blank" style="float: right" class="nav_link">SOCIALS</a>
+            <a href="https://open.spotify.com/artist/6RCTWmm3uYgXS0xI6uHPK2?si=XD1oljUFQ9CHTzL0ye6DVQ" target="_blank" style="float: right" class="nav_link">MUSIC</a>
+            <a href="https://joshnegreanu.com/neuphorm" style="float: right;" class="nav_link">NEUPHORM.</a>
+
+        </div>
+
+        <div class="text" style="color: black; font-family: Helvetica; font-weight: bolder; text-align: left; line-height: 0.85; font-size: 50px; text-shadow: 0px 0px 40px #f8f6ee">
+            NEG<br>REA<br>NU.
+        </div>
+
+        <footer class="footer">
+            <div class="footer_text" style="float: left;">WEBSITE HAND CRAFTED BY JOSH NEGREANU. HOSTED IN GITHUB PAGES. CODE VIEWABLE ON GITHUB. © 2025</div>
+            <a class="footer_link" style="text-transform: lowercase; float: right;" href="mailto:joshua.negreanu@gmail.com">joshua.negreanu@gmail.com</a>
+        </footer>
+
+        <svg class="circle" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700"><defs><radialGradient id="gggrain-gradient" r="1.1">
+            <stop offset="0%" stop-color="#f8f6ee"></stop>
+            <stop offset="50%" stop-color="#000000"></stop>
+            <stop offset="100%" stop-color=""></stop>
+          </radialGradient><filter id="gggrain-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.42" numOctaves="2" seed="2" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
+        <feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="colormatrix"></feColorMatrix>
+        <feComponentTransfer x="0%" y="0%" width="100%" height="100%" in="colormatrix" result="componentTransfer">
+          <feFuncR type="linear" slope="3"></feFuncR>
+          <feFuncG type="linear" slope="3"></feFuncG>
+          <feFuncB type="linear" slope="3"></feFuncB>
+        </feComponentTransfer>
+        <feColorMatrix x="0%" y="0%" width="100%" height="100%" in="componentTransfer" result="colormatrix2" type="matrix" values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 21 -13"></feColorMatrix>
+        </filter></defs><g><rect width="100%" height="100%" fill="url(#gggrain-gradient)"></rect><rect width="100%" height="100%" fill="transparent" filter="url(#gggrain-filter)" opacity="0.75" style="mix-blend-mode: overlay"></rect></g></svg>
+
+
+
+	</body>
+
+    <svg style="display: none">
+        <filter
+          id="glass-distortion"
+          x="0%"
+          y="0%"
+          width="100%"
+          height="100%"
+          filterUnits="objectBoundingBox"
+        >
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.001 0.005"
+            numOctaves="2"
+            seed="17"
+            result="turbulence"
+          />
+          <!-- Liked Seeds: 5, 14, 17 -->
+  
+          <feComponentTransfer in="turbulence" result="mapped">
+            <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
+            <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
+            <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
+          </feComponentTransfer>
+  
+          <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+  
+          <feSpecularLighting
+            in="softMap"
+            surfaceScale="5"
+            specularConstant="1"
+            specularExponent="100"
+            lighting-color="white"
+            result="specLight"
+          >
+            <fePointLight x="-200" y="-200" z="300" />
+          </feSpecularLighting>
+  
+          <feComposite
+            in="specLight"
+            operator="arithmetic"
+            k1="0"
+            k2="1"
+            k3="1"
+            k4="0"
+            result="litImage"
+          />
+  
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="softMap"
+            scale="200"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+      </svg>
+
+    <script type="text/javascript" src="cursor.js"></script>
+
+</html>
