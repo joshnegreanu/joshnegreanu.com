@@ -1,255 +1,134 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Negreau / Portfolio</title>
 
-	<head>
-		<meta charset="utf-8">
-		<title>Josh Negreau / Portfolio</title>
-		
-		<link rel="stylesheet" href="style.css" media="screen">
-        <link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=GFS Didot' rel='stylesheet'>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
 
-        <link rel="icon" href="images/favicon.ico">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $(window).scroll(function () {
-                    $('.centered_title').css("opacity", 1 - $(window).scrollTop() / 75);
-                })
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                $('.centered_title').css("opacity", 1 - $(window).scrollTop() / 75);
             })
-        </script>
-	</head>
+        })
+    </script>
+</head>
 
-	<body>
+<body>
 
-        <div class="topnav">
-            <a href="https://joshnegreanu.com" class="top_nav" style="margin-left: 60px"><div><b>Josh Negreanu<br><div style="color: gray;">Portland, Oregon</div></div></b></a>
-            
-            <a href="https://linktr.ee/joshnegreanu" target="_blank" style="float: right; margin-right: 60px;" class="top_nav"><div>SOCIALS</div></a>
-            <a href="https://github.com/JoshNegreanu" target="_blank" style="float: right" class="top_nav">GITHUB</a>
-            <a href="https://linkedin.com/in/joshnegreanu/" target="_blank" style="float: right" class="top_nav">LINKEDIN</a>
-            <a href="https://joshnegreanu.com/files/resume.pdf" target="_blank" style="float: right" class="top_nav">RESUME</a>
-            <!-- <a href="https://open.spotify.com/artist/6RCTWmm3uYgXS0xI6uHPK2?si=XD1oljUFQ9CHTzL0ye6DVQ" style="float: right" target="_blank" class="top_nav">Spotify</a> -->
-            <!-- <a href="https://joshnegreanu.com/create/architecture" style="float: right" class="top_nav">Create</a> -->
-            <!-- <a href="https://joshnegreanu.com/artificial-intelligence" style="float: right" class="top_nav">Artificial Intelligence</a> -->
+    <nav class="topnav">
+        <a href="https://joshnegreanu.com" class="top_nav nav-home">
+            <b>Josh Negreanu &nbsp</b><div class="nav-sub">Portland, OR</div>
+        </a>
+        <div class="nav-links">
+            <a href="https://joshnegreanu.com/files/resume.pdf" target="_blank" class="top_nav">RESUME</a>
+            <a href="https://linkedin.com/in/joshnegreanu/" target="_blank" class="top_nav">LINKEDIN</a>
+            <a href="https://github.com/JoshNegreanu" target="_blank" class="top_nav">GITHUB</a>
+            <a href="https://linktr.ee/joshnegreanu" target="_blank" class="top_nav">SOCIALS</a>
         </div>
-    
-        <div class="breaker"></div>
-        <div class="small_breaker"></div>
-    
-        <!-- <div class="centered_title">hi. i'm <div style="font-weight:bold; display:inline-table">josh negreanu.</div></div>
-        <div class="super_small_breaker"></div>
-        <div class="centered_title" style="color: rgb(160, 160, 160)">You can scroll down to find out more info about me.</div> -->
-    
-        <!-- <div class="small_breaker"></div>
-        <div class="small_breaker"></div> -->
-    
-        <!-- <img src="/images/me.jpg" class="center_img portrait" alt="me"> -->
-    
-        <!-- <div class="breaker"></div> -->
+    </nav>
 
-        <!-- <div class="header_text">Hey, I'm Josh.</div> -->
-        <!-- <div class="small_breaker"></div> -->
+    <br>
+    <br>
 
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-
-        <div class="body_section">
-            <div class="body_text" style="margin-left: 60px;">
-                <b>I am a passionate AI student and engineer focused on deep multimodal models, generative frameworks, and robotics intelligence.</b>
-                <br><br>
-                My experience spans deep model implementation and training, under-the-hood knowledge and research, as well as pipeline integration.
-                <br><br><br>
-                Please feel free to view my recent work below.
-            </div>
-
-            <div class="body_label" style="margin-right: 60px;">
-                <b>AI research and development for agents, NLP and robotics</b> based in Portland, Oregon.
-            </div>
+    <!-- Intro -->
+    <div class="intro-section">
+        <div class="intro-text">
+            <b>I am a passionate AI PhD student and engineer focused on deep multimodal models, generative frameworks, and robotics intelligence.</b>
+            <br><br>
+            My experience spans deep model implementation and training, under-the-hood knowledge and research, as well as pipeline integration.
+            My research involves applications of reinforcement learning for the next generation of language models.
+            <br><br>
+            Please feel free to view my recent work below.
         </div>
-
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-
-        <div class="body_section">
-            <div class="body_text" style="width: 25%;float: right; margin-right: 60px;">
-                Exploring the usage of diffusion models to generate priors during Thompson Sampling in the non-stationary multi-armed bandit setting.
-                <br><br><br>
-                Investigating an automated method of detecting action divergence during inference, and prompting human redirection to capture finetuning data.
-                <br><br><br>
-                We provide a mathematical framework for reward poisoning on stochastic dueling bandits algorithms, proving effective spoofing with sublinear cost bounds and forced linear regret.
-                Paper available on <a href="https://ir.library.oregonstate.edu/concern/honors_college_theses/4b29bg040?locale=en" target="_blank" class="normal_link"><u>OSU Archives</u></a>, code available on <a href="https://github.com/joshnegreanu/attacks-on-stochastic-dueling-bandits" target="_blank" class="normal_link"><u>Github</u></a>.
-            </div>
-
-            <div class="body_text" style="width: 15%; float: right;">
-
-                <b>Thompson Sampling with Diffusion Priors for Non-Stationary Bandits</b>
-                <br><br><br>
-                <b>Automated Finetuning of Robot Policies Post Deployment</b>
-                <br><br><br><br>
-                <b>Attacks on Stochastic Dueling Bandits</b>
-                
-            </div>
-
-            <div class="body_label" style="width: 40%; float: left; text-align: left; margin-left: 60px;">
-                <b>Research</b><br>Bandits, Robotics, Diffusion
-            </div>
+        <div class="intro-label">
+            <b>AI research and development</b> for NLP, decision making, and robotics.
         </div>
+    </div>
 
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
+    <!-- Research -->
+    <div class="section-row">
+        <div class="section-label">
+            <div class="label-title">Research</div>
+            <div class="label-sub">Diffusion LLMs, Bandits</div>
+        </div>
+        <div class="section-entries">
+            <div class="entry-title">Reinforcement Learning for Diffusion LLMs</div>
+            <div class="entry-desc">Investigating the use of reinforcement learning during latent sampling process for reasoning and agentic diffusion language models.</div>
 
-        <div class="body_section">
-            <div class="body_text" style="width: 15%; margin-left: 60px;">
+            <div class="entry-title">Attacks on Stochastic Dueling Bandits</div>
+            <div class="entry-desc">We provide a mathematical framework for reward poisoning on stochastic dueling bandits algorithms, proving effective spoofing with sublinear cost bounds and forced linear regret.
+                Paper available on <a href="https://ir.library.oregonstate.edu/concern/honors_college_theses/4b29bg040?locale=en" target="_blank" class="normal_link"><u>OSU Archives</u></a>,
+                code available on <a href="https://github.com/joshnegreanu/attacks-on-stochastic-dueling-bandits" target="_blank" class="normal_link"><u>Github</u></a>.</div>
+        </div>
+    </div>
 
-                <b>Discrete Diffusion and Auto-Regressive Language Model</b>
-                <br><br><br><br><br><br>
-                <b>Denoising Diffusion and Flow Matching Image Generation</b>
-                <br><br><br><br><br><br><br>
-                <b>Math Machine Translation</b>
-                
-            </div>
+    <!-- Projects -->
+    <div class="section-row section-row--reverse">
+        <div class="section-label">
+            <div class="label-title">Projects</div>
+            <div class="label-sub">NLP, Generation, Translation</div>
+        </div>
+        <div class="section-entries">
+            <div class="entry-title">Thompson Sampling with Diffusion and Flow Matching Priors for Linear Banditsl</div>
+            <div class="entry-desc">Developed guided diffusion and flow matching algorithms for linear bandit prior sampling, as well as low-rank approximations to reduce per-round time complexity while preserving regret bounds.
+                Open-source code available on <a href="https://github.com/joshnegreanu/diffusion-priors" target="_blank" class="normal_link"><u>Github</u></a>.</div>
 
-            <div class="body_text" style="width: 25%">
-                A from-scratch implementation of both traditional auto-regressive and discrete diffusion generative transformer-based language models.
+            <div class="entry-title">Discrete Diffusion and Auto-Regressive Language Model</div>
+            <div class="entry-desc">A from-scratch implementation of both traditional auto-regressive and discrete diffusion generative transformer-based language models.
                 Trained on openwebtext utilizing DGX system.
-                Open-source code available on <a href="https://github.com/joshnegreanu/language-diffusion" target="_blank" class="normal_link"><u>Github</u></a>.
-                <br><br><br>
-                A from-scratch implementation of denoising diffusion and flow matching image generative models (CNN U-Net and latent vision transformer).
+                Open-source code available on <a href="https://github.com/joshnegreanu/language-diffusion" target="_blank" class="normal_link"><u>Github</u></a>.</div>
+
+            <div class="entry-title">Denoising Diffusion and Flow Matching Image Generation</div>
+            <div class="entry-desc">A from-scratch implementation of denoising diffusion and flow matching image generative models (CNN U-Net and latent vision transformer).
                 Trained on Stanford Cars, CelebA, ImageNet utilizing DGX system.
-                Open-source code available on <a href="https://github.com/joshnegreanu/image-diffusion" target="_blank" class="normal_link"><u>Github</u></a>.
-                <br><br><br>
-                Implementation of novel seq2seq transformer model for math word problem to computational graph construction.
+                Open-source code available on <a href="https://github.com/joshnegreanu/image-diffusion" target="_blank" class="normal_link"><u>Github</u></a>.</div>
+
+            <!-- <div class="entry-title">Math Machine Translation</div>
+            <div class="entry-desc">Implementation of novel seq2seq transformer model for math word problem to computational graph construction.
                 Trained on MathQA dataset utilizing DGX system.
-                Open-source code and report available on <a href="https://github.com/joshnegreanu/math-to-graph-translation" target="_blank" class="normal_link"><u>Github</u></a>.
-            </div>
-
-            <div class="body_label" style="width: 40%; margin-right: 60px;">
-                <b>Projects</b><br>NLP, Generation, Translation
-            </div>
+                Open-source code and report available on <a href="https://github.com/joshnegreanu/math-to-graph-translation" target="_blank" class="normal_link"><u>Github</u></a>.</div> -->
         </div>
+    </div>
 
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-
-        <div class="body_section">
-            <div class="body_text" style="width: 25%;float: right; margin-right: 60px;">
+    <!-- Experience -->
+    <div class="section-row">
+        <div class="section-label">
+            <div class="label-title">Experience</div>
+            <div class="label-sub">Industry, Educational</div>
+        </div>
+        <div class="section-entries">
+            <div class="entry-title">REVOBOTS AI Intern</div>
+            <div class="entry-desc">
                 Designed and deployed video conferencing application allowing real-time VR embodiment of robots for teleoperation. Implemented with WebXR, GPU accelerated encoding, SFU server.
                 <br><br>
                 Utilized Hugging Face LeRobot framework for teleoperation, 100+ episode dataset recording, compression.
                 <br><br>
                 Employed MLOps for automated multi-day training of transformer-based robot policies on DGX system using collected datasets.
-                <br><br><br>
-                Teaching assistant for Programming Language Fundamentals, covering Haskell and Prolog.
-                <br><br><br>
-                Learning assistant for Operating Systems I, Data Structures, and Gen Engineering.
             </div>
 
-            <div class="body_text" style="width: 15%; float: right;">
+            <div class="entry-title">Graduate Teaching Assistant</div>
+            <div class="entry-desc">Teaching assistant for Programming Language Fundamentals, covering Haskell and Prolog.</div>
 
-                <b>REVOBOTS AI Intern</b>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <b>Graduate Teaching Assistant</b>
-                <br><br><br><br>
-                <b>Undergraduate Learning Assistant</b>
-                
-            </div>
-
-            <div class="body_label" style="width: 40%; float: left; text-align: left; margin-left: 60px;">
-                <b>Experience</b><br>Industry, Educational
-            </div>
+            <div class="entry-title">Undergraduate Learning Assistant</div>
+            <div class="entry-desc">Learning assistant for Operating Systems I, Data Structures, and Gen Engineering.</div>
         </div>
+    </div>
 
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-        <div class="breaker"></div>
+    <div class="footer-spacer"></div>
 
-        <!-- <img src="/images/me.jpg" class="center_img portrait" alt="me"> -->
+    <footer class="botnav">
+        <div class="footer_text">WEBSITE CODE IS ON GITHUB. LINK IS ABOVE. © 2026</div>
+        <a class="footer_link" href="mailto:joshua.negreanu@gmail.com">joshua.negreanu@gmail.com</a>
+    </footer>
 
-        <!-- <div class="small_breaker"></div>
-        <div class="body_text">     My current research is in multiarmed bandits, lead by Huazheng Wang. 
-                                    Feel free to click on the navigation tab above labeled "Artificial Intelligence" to learn more about my projects.
-                                    
-                                    
-        </div>
-
-        <div class="small_breaker"></div>
-        <div class="body_text">     Outside of academics and computer science, I like to make music and pursue my interests in architecture and art. 
-                                    Feel free to click on the navigation tab above labeled "Create" to learn more about my non-academic interests. 
-                                    I love running, hiking, backpacking, paddleboarding, snowboarding, mountain biking, and climbing.
-        </div>
-        
-
-    
-        <div class="breaker"></div>
-
-        <div class="header_text">professional information</div>
-        <div class="small_breaker"></div>
-        <div class="body_text">     I am currently available for hire. 
-                                    I am deeply passionate about artificial intelligence, but I experienced in many other areas of computer science, 
-                                    mathematics, and computation.
-                                    
-        </div>
-        <div class="small_breaker"></div>
-        <div class="body_text">     For specific information regarding my skills as a programmer as well as my work experience, you can check out my resume either 
-                                    <a href="files/resume.pdf" class="normal_link">here</a>
-                                     or at the top navigation bar to download a .pdf copy. 
-                                    If you are at all interested, please do not hesitate to contact me via my 
-                                    <a href="mailto:negreanj@oregonstate.edu" class="normal_link">email</a>
-                                     or my 
-                                    <a href="tel:5037340196" class="normal_link">phone number</a>.
-        </div>
-    
-        <div class="breaker"></div> -->
-        
-        <!-- <div class="header_text">contact information</div>
-        <div class="small_breaker"></div>
-        <a href="mailto:negreanj@oregonstate.edu" class="normal_link" style="text-align: center; display:block; width:fit-content">negreanj@oregonstate.edu</a>
-        <div class="super_small_breaker"></div>
-        <a href="tel:5037340196" class="normal_link" style="text-align: center; display:block; width:fit-content">503-734-0196</a>
-        <div class="small_breaker"></div>
-        <a href="http://linkedin.com/in/joshnegreanu/" class="normal_link" style="text-align: center; display:block; width:fit-content" target="_blank">linkedin.com/in/joshnegreanu</a>
-        <div class="super_small_breaker"></div>
-        <a href="http://github.com/joshnegreanu" class="normal_link" style="text-align: center; display:block; width:fit-content" target="_blank">github.com/joshnegreanu</a>
-        <div class="small_breaker"></div>
-        <a href="http://joshnegreanu.com/" class="normal_link" style="text-align: center; display:block; width:fit-content" target="_blank">joshnegreanu.com</a> -->
-
-        <div class="breaker"></div>
-        <div class="breaker"></div>
-
-        <footer class="botnav">
-            <div class="footer_text" style="float: left; margin-left: 60px;">WEBSITE PROGRAMMED BY HAND BY JOSH NEGREANU. CODE IS ON GITHUB. LINK IS ABOVE. © 2026</div>
-            <a class="footer_link" style="text-transform: lowercase; float: right; margin-right: 60px;" href="mailto:joshua.negreanu@gmail.com">joshua.negreanu@gmail.com</a>
-        </footer>
-        
-	</body>
+</body>
 </html>
