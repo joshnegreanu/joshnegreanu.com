@@ -7,23 +7,19 @@
     <title>Josh Negreau / Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link rel="icon" href="images/favicon.ico">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                $('.centered_title').css("opacity", 1 - $(window).scrollTop() / 75);
-            })
-        })
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
     </script>
 </head>
 
 <body>
-
     <nav class="topnav">
         <a href="https://joshnegreanu.com" class="top_nav nav-home">
             <b>Josh Negreanu &nbsp</b><div class="nav-sub">Portland, OR</div>
@@ -36,34 +32,23 @@
         </div>
     </nav>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
     <!-- Intro -->
     <div class="intro-section">
         <div class="intro-text">
-            <b>I am a passionate AI PhD student and engineer focused on deep multimodal models, generative frameworks, and robotics intelligence.</b>
+            I am a passionate AI PhD student and engineer focused on deep multimodal models and generative frameworks for natural language processing and robotics.
             <br><br>
             My experience spans deep model implementation and training, under-the-hood knowledge and research, as well as pipeline integration.
             My research involves applications of reinforcement learning for the next generation of language models.
             <br><br>
-            Please feel free to view my recent work below.
+            <div style="color: rgb(100, 100, 100)">Please feel free to <a class="normal_link" href="#research"><u>view my most recent work</u></a>.</div>
         </div>
         <div class="intro-label">
-            <b>AI research and development</b> for NLP, decision making, and robotics.
+            AI researcher & developer for NLP, decision making, and robotics.
         </div>
     </div>
 
     <!-- Research -->
-    <div class="section-row">
+    <div id="research" class="section-row">
         <div class="section-label">
             <div class="label-title">Research</div>
             <div class="label-sub">Diffusion LLMs, Bandits</div>
@@ -83,7 +68,7 @@
     <div class="section-row section-row--reverse">
         <div class="section-label">
             <div class="label-title">Projects</div>
-            <div class="label-sub">NLP, Generation, Translation</div>
+            <div class="label-sub">NLP, GenAI, Diffusion</div>
         </div>
         <div class="section-entries">
             <div class="entry-title">Thompson Sampling with Diffusion and Flow Matching Priors for Linear Banditsl</div>

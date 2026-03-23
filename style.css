@@ -1,6 +1,24 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'TiemposText';
+    src: url('fonts/TiemposText-Regular.otf') format('opentype');
+    font-weight: 300 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TiemposText';
+    src: url('fonts/TiemposText-Semibold.otf') format('opentype');
+    font-weight: 600 700;
+    font-style: normal;
+}
+
 /* --- Reset & Base --- */
+html {
+    scroll-behavior: smooth;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -10,7 +28,7 @@ body {
     padding: 0;
     /* background-color: #fcfbf8; */
 	background-color: white;
-    font-family: sans-serif;
+    font-family: 'TiemposText', serif;
     font-weight: 300;
     color: black;
 }
@@ -37,6 +55,7 @@ body {
     color: black;
     /* padding: 0 12px; */
     font-size: 16px;
+    font-family: sans-serif;
     /* line-height: -1.4; */
 }
 
@@ -58,12 +77,31 @@ a.top_nav {
     padding: 20px 16px;
     color: black;
     text-decoration: none;
+    position: relative;
     /* white-space: nowrap; */
+}
+
+a.top_nav::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 18px;
+    height: 1px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+a.top_nav:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* --- Links --- */
 .normal_link {
-    font-family: sans-serif;
+    font-family: 'TiemposText', serif;
     font-weight: 300;
     color: black;
     font-size: inherit;
@@ -74,8 +112,9 @@ a.top_nav {
 .intro-section {
     display: flex;
     gap: 4rem;
-    padding: 160px 60px 6rem;
-    align-items: flex-start;
+    padding: 80px 60px;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .intro-text {
@@ -116,14 +155,14 @@ a.top_nav {
 
 .label-title {
     font-size: 64px;
-    /* font-weight: lighter; */
     /* line-height: 1.05; */
-    font-weight: bolder;
+    font-weight: 400;
 }
 
 .label-sub {
+    color: rgb(100, 100, 100);
     font-size: 64px;
-    font-weight: lighter;
+    font-weight: 400;
     /* line-height: 1.05; */
     display: block;
 }
@@ -148,7 +187,7 @@ a.top_nav {
     font-weight: lighter;
     font-size: 16px;
     /* line-height: 1.7; */
-    color: black;
+    color: rgb(100, 100, 100);
 }
 
 /* --- Footer --- */
@@ -171,7 +210,7 @@ a.top_nav {
 }
 
 .footer_text {
-    font-family: 'Inter', sans-serif;
+    font-family: sans-serif;
     font-weight: 300;
     color: white;
     font-size: 16px;
@@ -186,8 +225,27 @@ a.top_nav {
     font-size: 16px;
     text-decoration: none;
     padding: 20px 0;
+    position: relative;
     /* letter-spacing: 0.02em; */
     text-transform: lowercase;
+}
+
+.footer_link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 18px;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.footer_link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* --- Responsive: Tablet --- */
@@ -198,7 +256,7 @@ a.top_nav {
 
     .intro-section {
         flex-direction: column;
-        padding: 140px 30px 4rem;
+        padding: 80px 30px;
         gap: 2rem;
     }
 
@@ -254,7 +312,7 @@ a.top_nav {
     }
 
     .intro-section {
-        padding: 130px 20px 3rem;
+        padding: 80px 20px;
     }
 
     .intro-label {
