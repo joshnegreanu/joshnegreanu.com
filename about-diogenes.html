@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" style="filter: invert(100%);">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josh Negreanu / Diogenes</title>
+    <title>About Diogenes</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -22,7 +22,7 @@
 <body>
     <nav class="topnav">
         <a href="https://joshnegreanu.com" class="top_nav nav-home">
-            <b>Josh Negreanu &nbsp</b><div class="nav-sub">Portland, OR</div>
+            JOSH NEGREANU &nbsp<div class="nav-sub">Portland, OR</div>
         </a>
         <div class="nav-links">
             <a href="https://joshnegreanu.com/about-diogenes" class="top_nav">DIOGENES</a>
@@ -36,22 +36,24 @@
     <!-- Intro -->
     <div class="intro-section">
         <div class="intro-label" style="text-align: left;">
-            About Diogenes.
+            Meet Diogenes.
         </div>
         <div class="intro-text">
-            Diogenes is currently a work in progress LLM chatbot entirely built from scratch.
+            Diogenes is currently a work in progress LLM chatbot built and trained entirely from scratch.
             While early versions will utilize autoregressive generation paradigms, future versions will explore diffusion-based language modeling and reasoning.
             <br><br>
             The project is focused on building a deep understanding of the inner workings of language models, and exploring novel architectures and training paradigms for next generation models.
             <br><br>
-            <div style="color: rgb(100, 100, 100)">Please feel free to view the <a class="normal_link" href="https://github.com/joshnegreanu/diogenes" target="_blank"><u>Github repository</u></a>.</div>
+            <div style="color: rgb(100, 100, 100)">Please feel free to view the <a class="normal_link" href="https://github.com/diogenes-josh-negreanu" target="_blank"><u>Github organization</u></a>.</div>
         </div>
     </div>
 
+
+
     <!-- <div id="research" class="section-row">
         <div class="section-label">
-            <div class="label-title">Research</div>
-            <div class="label-sub">Diffusion LLMs, Bandits</div>
+            <div class="label-title">diogenes-beta</div>
+            <div class="label-sub"></div>
         </div>
         <div class="section-entries">
             <div class="entry-title">Reinforcement Learning for Diffusion LLMs</div>
@@ -64,11 +66,45 @@
         </div>
     </div> -->
 
-    <!-- <div class="footer-spacer"></div> -->
+    <!-- Dev Log -->
+    <div class="posts-section">
+        <div class="posts-header">Entries</div>
+        <div class="post-list">
 
-    <footer class="botnav" style="background-color: white;">
-        <div class="footer_text" style="color: black">WEBSITE CODE IS ON GITHUB. LINK IS ABOVE. © 2026</div>
-        <a class="footer_link" style="color: black" href="mailto:joshua.negreanu@gmail.com">joshua.negreanu@gmail.com</a>
+            <article class="post-entry">
+                <div class="post-meta">
+                    <div class="post-title">Starting pretraining of diogenes-beta</div>
+                    <br>
+                    <div class="post-date">April 14, 2026</div>
+                </div>
+                <div class="post-body">
+                    I have started pretraining the second version of Diogenes, dubbed diogenes-beta. This version is larger, with 24 transformer layers, 12 attention heads, and employing attention residuals across each transformer layer.
+                    I am pretraining on the HuggingFaceTB corpus dataset cosmopedia-v2, which is a large, diverse, and clean synthetic dataset for pretraining.
+                    This dataset contains roughly 30 billion tokens; I am unsure if I will be able to fully train on this dataset or simply a subset of it.
+                    <br><br>
+                    I am training on a single H100 GPU, and am using a context window of 2048 tokens, a batch size of 32 sequences, and a learning rate of 3e-4 with cosine annealing.
+                    This should hopefully provide me with a very smooth training procedure, and I am excited to see how the model performs as training progresses.
+                    <br><br>
+                    After pretraining, I plan to finetune the model on a variety of chatbot tasks via the smoltalk datatset, again provided by HuggingFaceTB.
+                    This dataset contains a variety of high quality chatbot conversations, and should provide a good finetuning dataset for the model.
+                    <br><br>
+                    My eventual plans are to also employ RLHF using DPO, though this can wait until after the initial pretraining and finetuning is complete.
+                    <br><br>
+                    I have learned a lot about this process from my first attempt at building Diogenes, dubbed diognes-alpha. While this model generated natural language, it performed poorly on tasks and was difficult to converse with.
+                    I hope that with the improvements I have made to the architecture and training procedure, diogenes-beta will be a much more capable and engaging model.
+                </div>
+            </article>
+
+            
+
+        </div>
+    </div>
+
+    <div class="footer-spacer"></div>
+
+    <footer class="botnav">
+        <div class="footer_text">WEBSITE CODE IS ON GITHUB. LINK IS ABOVE. © 2026</div>
+        <a class="footer_link" href="mailto:joshua.negreanu@gmail.com">joshua.negreanu@gmail.com</a>
     </footer>
 
 </body>

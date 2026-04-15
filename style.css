@@ -58,12 +58,13 @@ body {
     /* padding: 0 12px; */
     font-size: 16px;
     font-family: 'Iter', sans-serif;
+    font-weight: 400;
     /* line-height: -1.4; */
 }
 
 .nav-sub {
     color: gray;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .nav-links {
@@ -74,7 +75,7 @@ body {
 
 a.top_nav {
     font-family: 'Iter', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     padding: 20px 16px;
     color: black;
@@ -105,7 +106,7 @@ a.top_nav:hover::after {
 .normal_link {
     /* font-family: 'TiemposText', serif; */
     font-family: 'Iter', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: black;
     font-size: inherit;
     text-decoration: none;
@@ -125,12 +126,14 @@ a.top_nav:hover::after {
     font-size: 16px;
     /* line-height: 1.8; */
     font-family: 'Iter', sans-serif;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
 }
 
 .intro-label {
     flex: 1;
     font-size: 64px;
-    font-weight: lighter;
+    font-weight: 400;
     /* line-height: 1.3; */
     text-align: right;
 }
@@ -181,14 +184,15 @@ a.top_nav:hover::after {
 }
 
 .entry-title {
-    font-weight: bolder;
+    font-weight: 400;
     font-size: 16px;
     /* line-height: 1.7; */
     color: black;
+    font-family: 'Iter', sans-serif;
 }
 
 .entry-desc {
-    font-weight: lighter;
+    font-weight: 400;
     font-size: 16px;
     /* line-height: 1.7; */
     color: rgb(100, 100, 100);
@@ -216,7 +220,7 @@ a.top_nav:hover::after {
 
 .footer_text {
     font-family: 'Iter', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: white;
     font-size: 16px;
     padding: 20px 0;
@@ -225,7 +229,7 @@ a.top_nav:hover::after {
 
 .footer_link {
     font-family: 'Iter', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: white;
     font-size: 16px;
     text-decoration: none;
@@ -298,6 +302,15 @@ a.top_nav:hover::after {
     .botnav {
         padding: 0 30px;
     }
+
+    .posts-section {
+        padding: 3rem 30px;
+    }
+
+    .posts-header {
+        font-size: 40px;
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* --- Responsive: Mobile --- */
@@ -364,6 +377,98 @@ a.top_nav:hover::after {
     .footer-spacer {
         padding-bottom: 90px;
     }
+
+    .posts-section {
+        padding: 2.5rem 20px;
+    }
+
+    .posts-header {
+        font-size: 32px;
+        margin-bottom: 1.25rem;
+    }
+
+    .post-entry {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}
+
+/* --- Blog Posts --- */
+.posts-section {
+    padding: 5rem 60px;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts-header {
+    font-size: 64px;
+    font-weight: 400;
+    width: 100%;
+    max-width: 860px;
+    margin-bottom: 2rem;
+}
+
+.post-list {
+    width: 100%;
+    max-width: 860px;
+}
+
+.post-entry {
+    display: grid;
+    grid-template-columns: minmax(160px, 210px) 1fr;
+    gap: 2rem 3rem;
+    align-items: start;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.post-entry:first-child {
+    padding-top: 0;
+}
+
+.post-entry:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.post-meta {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.25rem; */
+}
+
+.post-title {
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    /* color: rgb(100, 100, 100); */
+    font-family: 'Iter', sans-serif;
+}
+
+.post-date {
+    font-size: 16px;
+    color: black;
+    /* color: rgb(160, 160, 160); */
+    font-family: 'Iter', sans-serif;
+    font-weight: 400;
+    /* white-space: nowrap; */
+}
+
+.post-body {
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    font-family: 'Iter', sans-serif;
+    font-weight: 400;
+}
+
+.post-body p {
+    margin: 0 0 0.75em;
+}
+
+.post-body p:last-child {
+    margin-bottom: 0;
 }
 
 /* --- Images & Video (preserved) --- */
