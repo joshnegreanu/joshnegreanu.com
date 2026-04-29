@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat w/Diogenes</title>
+    <title>JoshGPT</title>
 
     <link rel="stylesheet" href="style2.css">
 
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="images/diogenes.ico">
+    <link rel="icon" href="images/joshgpt.ico">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
@@ -28,7 +28,7 @@
         <!-- <a href="https://joshnegreanu.com" class="top_nav nav-home">
             <b>Josh Negreanu &nbsp</b><div class="nav-sub">Portland, OR</div>
         </a> -->
-        <a class="top_nav_logo" style="text-decoration: none; color: black;" href="https://joshnegreanu.com/chat-with-diogenes">d\</a>
+        <a class="top_nav_logo" style="text-decoration: none; color: black;" href="https://joshnegreanu.com/chat">d\</a>
         <!-- <div class="nav-links"> -->
             <!-- <a href="https://joshnegreanu.com" class="top_nav">joshnegreanu.com</a> -->
             <!-- <a href="https://joshnegreanu.com/files/resume.pdf" target="_blank" class="top_nav">RESUME</a>
@@ -49,7 +49,7 @@
             <div class="greeting-card" id="greetingCard">
                 <div class="greeting-title" id="greetingTitle">Hello, there.</div>
                 <!-- <br> -->
-                <div class="greeting-sub" style="color: rgb(100, 100, 100)">Diogenes is an experimental and small-scale personal project; it makes frequent errors and should not be used for professional purposes. You can read <a href="https://joshnegreanu.com/about-diogenes" style="font-family: 'Inter', sans-serif;" class="normal_link" target="_blank"><u>updates</u></a> on the project and view the open-source code on <a class="normal_link" style="font-family: 'Inter', sans-serif;" href="https://github.com/diogenes-llm" target="_blank"><u>Github</u></a>.</div>
+                <div class="greeting-sub" style="color: rgb(100, 100, 100)">JoshGPT is an experimental and small-scale personal project; it makes frequent errors and should not be used for professional purposes. You can read <a href="https://joshnegreanu.com/about-joshgpt" style="font-family: 'Inter', sans-serif;" class="normal_link" target="_blank"><u>updates</u></a> on the project and view the open-source code on <a class="normal_link" style="font-family: 'Inter', sans-serif;" href="https://github.com/joshgpt" target="_blank"><u>Github</u></a>.</div>
                 <div class="mode-selector" id="modeSelector">
                     <button class="mode-btn mode-btn--active" data-mode="conversational" onclick="selectMode(this)">Conversational</button>
                     <button class="mode-btn" data-mode="scholar" onclick="selectMode(this)">Scholar</button>
@@ -86,7 +86,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="input-disclaimer">Diogenes is an experimental project and should not be used for production purposes.</div>
+            <div class="input-disclaimer">JoshGPT is an experimental project and should not be used for production purposes.</div>
         </div>
     </div>
 
@@ -97,7 +97,7 @@
 
     <script>
         // const API_BASE = 'http://localhost:8000';
-        const API_BASE = 'https://diogenes-server.joshnegreanu.com';
+        const API_BASE = 'https://joshgpt-server.joshnegreanu.com';
         const SESSION_ID = crypto.randomUUID();
         let hasStarted = false;
         let isGenerating = false;

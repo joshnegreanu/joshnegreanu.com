@@ -9,12 +9,28 @@
     font-style: normal;
 }
 
+
 @font-face {
     font-family: 'TiemposText';
     src: url('fonts/TiemposText-Semibold.otf') format('opentype');
     font-weight: 600 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'LibreCaslonText';
+    src: url('fonts/LibreCaslonText-Regular.ttf') format('truetype');
+    font-weight: 300 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LibreCaslonText';
+    src: url('fonts/LibreCaslonText-Semibold.ttf') format('truetype');
+    font-weight: 600 700;
+    font-style: normal;
+}
+
 
 /* --- Reset & Base --- */
 html {
@@ -30,7 +46,7 @@ body {
     padding: 0;
     /* background-color: #fcfbf8; */
 	background-color: white;
-    font-family: 'TiemposText', serif;
+    font-family: 'LibreCaslonText', serif;
     font-weight: 300;
     color: black;
 }
