@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Iter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @font-face {
     font-family: 'TiemposText';
@@ -46,7 +46,7 @@ body {
     padding: 0;
     /* background-color: #fcfbf8; */
 	background-color: white;
-    font-family: 'LibreCaslonText', serif;
+    font-family: 'TiemposText', serif;
     font-weight: 300;
     color: black;
 }
@@ -73,7 +73,7 @@ body {
     color: black;
     /* padding: 0 12px; */
     font-size: 16px;
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     /* line-height: -1.4; */
 }
@@ -90,7 +90,7 @@ body {
 }
 
 a.top_nav {
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
     padding: 20px 16px;
@@ -121,7 +121,7 @@ a.top_nav:hover::after {
 /* --- Links --- */
 .normal_link {
     /* font-family: 'TiemposText', serif; */
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: black;
     font-size: inherit;
@@ -141,7 +141,7 @@ a.top_nav:hover::after {
     flex: 1;
     font-size: 16px;
     /* line-height: 1.8; */
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: rgb(100, 100, 100);
 }
@@ -200,11 +200,11 @@ a.top_nav:hover::after {
 }
 
 .entry-title {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     /* line-height: 1.7; */
     color: black;
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .entry-desc {
@@ -212,7 +212,7 @@ a.top_nav:hover::after {
     font-size: 16px;
     /* line-height: 1.7; */
     color: rgb(100, 100, 100);
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 /* --- Footer --- */
@@ -235,7 +235,7 @@ a.top_nav:hover::after {
 }
 
 .footer_text {
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: white;
     font-size: 16px;
@@ -244,7 +244,7 @@ a.top_nav:hover::after {
 }
 
 .footer_link {
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: white;
     font-size: 16px;
@@ -460,14 +460,14 @@ a.top_nav:hover::after {
     font-size: 16px;
     color: black;
     /* color: rgb(100, 100, 100); */
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .post-date {
     font-size: 16px;
     color: black;
     /* color: rgb(160, 160, 160); */
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     /* white-space: nowrap; */
 }
@@ -475,7 +475,7 @@ a.top_nav:hover::after {
 .post-body {
     font-size: 16px;
     color: rgb(100, 100, 100);
-    font-family: 'Iter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
 

@@ -42,7 +42,7 @@ body {
     padding: 0;
     /* background-color: #fcfbf8; */
 	background-color: white;
-    font-family: 'LibreCaslonText', serif;
+    font-family: 'TiemposText', serif;
     font-weight: 400;
     color: black;
     min-height: 100vh;
@@ -101,7 +101,7 @@ a.top_nav {
 }
 
 .top_nav_logo {
-    font-family: 'LibreCaslonText', serif;
+    font-family: 'TiemposText', serif;
     font-size: 32px;
     /* font-weight: 400; */
     padding: 28px;
@@ -128,7 +128,7 @@ a.top_nav:hover::after {
 
 /* --- Links --- */
 .normal_link {
-    font-family: 'LibreCaslonText', serif;
+    font-family: 'TiemposText', serif;
     font-weight: 400;
     color: black;
     font-size: inherit;
@@ -471,7 +471,7 @@ body.chat-started .input-disclaimer {
 }
 
 .greeting-title {
-    font-family: 'LibreCaslonText', serif;
+    font-family: 'TiemposText', serif;
     font-size: 64px;
     font-weight: lighter;
     line-height: 1;
