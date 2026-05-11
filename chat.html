@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JoshGPT</title>
 
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@
     <link rel="icon" href="images/joshgpt.ico">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
@@ -23,23 +24,21 @@
     </script>
 </head>
 
-<body>
+<body class="chat-body">
     <nav class="topnav">
-        <!-- <a href="https://joshnegreanu.com" class="top_nav nav-home">
-            <b>Josh Negreanu &nbsp</b><div class="nav-sub">Portland, OR</div>
-        </a> -->
-        <a class="top_nav_logo" style="text-decoration: none; color: black;" href="https://joshnegreanu.com/chat">d\</a>
-        <!-- <div class="nav-links"> -->
-            <!-- <a href="https://joshnegreanu.com" class="top_nav">joshnegreanu.com</a> -->
-            <!-- <a href="https://joshnegreanu.com/files/resume.pdf" target="_blank" class="top_nav">RESUME</a>
+        <a href="https://joshnegreanu.com" class="top_nav nav-home">
+            JOSH NEGREANU &nbsp<div class="nav-sub">Portland, OR</div>
+        </a>
+        <div class="nav-links">
+            <a href="https://joshnegreanu.com/about-joshgpt" class="top_nav">JOSHGPT</a>
+            <a href="https://joshnegreanu.com/files/resume.pdf" target="_blank" class="top_nav">RESUME</a>
             <a href="https://linkedin.com/in/joshnegreanu/" target="_blank" class="top_nav">LINKEDIN</a>
             <a href="https://github.com/JoshNegreanu" target="_blank" class="top_nav">GITHUB</a>
-            <a href="https://linktr.ee/joshnegreanu" target="_blank" class="top_nav">SOCIALS</a> -->
-        <!-- </div> -->
+            <a href="https://linktr.ee/joshnegreanu" target="_blank" class="top_nav">SOCIALS</a>
+        </div>
     </nav>
 
-    <!-- Top gradient fade -->
-    <div class="fade-top"></div>
+    <!-- Top gradient fade removed -->
 
     <!-- Chat Interface -->
     <div class="chat-page">
@@ -49,9 +48,15 @@
             <div class="greeting-card" id="greetingCard">
                 <div class="greeting-title" id="greetingTitle">Hello, there.</div>
                 <!-- <br> -->
-                <div class="greeting-sub" style="color: rgb(100, 100, 100)">JoshGPT is an experimental and small-scale personal project; it makes frequent errors and should not be used for professional purposes. You can read <a href="https://joshnegreanu.com/about-joshgpt" style="font-family: 'Inter', sans-serif;" class="normal_link" target="_blank"><u>updates</u></a> on the project and view the open-source code on <a class="normal_link" style="font-family: 'Inter', sans-serif;" href="https://github.com/joshgpt" target="_blank"><u>Github</u></a>.</div>
+                <div class="greeting-sub">JoshGPT is an experimental and small-scale personal project; it makes frequent
+                    errors and should not be used for professional purposes. You can read <a
+                        href="https://joshnegreanu.com/about-joshgpt" style="font-family: 'Inter', sans-serif;"
+                        class="normal_link" target="_blank">updates</a> on the project and view the open-source
+                    code on <a class="normal_link" style="font-family: 'Inter', sans-serif;"
+                        href="https://github.com/joshgpt" target="_blank">Github</a>.</div>
                 <div class="mode-selector" id="modeSelector">
-                    <button class="mode-btn mode-btn--active" data-mode="conversational" onclick="selectMode(this)">Conversational</button>
+                    <button class="mode-btn mode-btn--active" data-mode="conversational"
+                        onclick="selectMode(this)">Conversational</button>
                     <button class="mode-btn" data-mode="scholar" onclick="selectMode(this)">Scholar</button>
                     <button class="mode-btn" data-mode="creative" onclick="selectMode(this)">Creative</button>
                 </div>
@@ -59,7 +64,7 @@
                 <!-- <div class="greeting-desc">
                     Currently in development — the model and server are not yet live.<br>
                     Feel free to explore the interface or view the
-                    <a class="normal_link" href="https://github.com/joshnegreanu/diogenes" target="_blank"><u>GitHub repository</u></a>.
+                    <a class="normal_link" href="https://github.com/joshnegreanu/diogenes" target="_blank">GitHub repository</a>.
                 </div> -->
                 <!-- <div class="greeting-chips">
                     <button class="chip" onclick="handleChip(this)">What is Diogenes?</button>
@@ -71,22 +76,18 @@
 
         <!-- Chat Input Bar -->
         <div class="chat-input-bar">
-            <div class="fade-bottom"></div>
             <div class="chat-input-inner">
-                <textarea
-                    class="chat-input"
-                    id="chatInput"
-                    placeholder="Ask away..."
-                    rows="1"
-                    aria-label="Message input"
-                ></textarea>
+                <textarea class="chat-input" id="chatInput" placeholder="What can I help you with?" rows="1"
+                    aria-label="Message input"></textarea>
                 <button class="chat-send-btn" id="sendBtn" onclick="sendMessage()" aria-label="Send message">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 12V2M7 2L2.5 6.5M7 2L11.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 12V2M7 2L2.5 6.5M7 2L11.5 6.5" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
             </div>
-            <div class="input-disclaimer">JoshGPT is an experimental project and should not be used for production purposes.</div>
+            <div class="input-disclaimer">JoshGPT is an experimental project and should not be used for production
+                purposes.</div>
         </div>
     </div>
 
@@ -96,8 +97,8 @@
     </footer> -->
 
     <script>
-        // const API_BASE = 'http://localhost:8000';
-        const API_BASE = 'https://joshgpt-server.joshnegreanu.com';
+        const API_BASE = 'http://localhost:8000';
+        // const API_BASE = 'https://joshgpt-server.joshnegreanu.com';
         const SESSION_ID = crypto.randomUUID();
         let hasStarted = false;
         let isGenerating = false;
@@ -162,6 +163,7 @@
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder();
                 let buffer = '';
+                let rawText = '';
 
                 while (true) {
                     const { done, value } = await reader.read();
@@ -175,7 +177,8 @@
 
                     for (const line of lines) {
                         if (line.startsWith('data: ')) {
-                            botDiv.textContent += JSON.parse(line.slice(6));
+                            rawText += JSON.parse(line.slice(6));
+                            botDiv.innerHTML = marked.parse(rawText);
                             scrollToBottom();
                         }
                     }
@@ -278,4 +281,5 @@
     </script>
 
 </body>
+
 </html>
