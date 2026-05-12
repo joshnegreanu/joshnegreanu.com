@@ -97,8 +97,9 @@
     </footer> -->
 
     <script>
-        const API_BASE = 'http://localhost:8000';
+        // const API_BASE = 'http://localhost:8000';
         // const API_BASE = 'https://joshgpt-server.joshnegreanu.com';
+        const API_BASE = 'https://joshua-negreanu--joshgpt-joshgptservice-web.modal.run'
         const SESSION_ID = crypto.randomUUID();
         let hasStarted = false;
         let isGenerating = false;
@@ -241,6 +242,9 @@
                 'Ask me anything.',
                 'Good to see you.',
                 'Hey there.',
+                'What\'s up?',
+                'What\'s new?',
+                'How are you?',
             ];
             const titleEl = document.getElementById('greetingTitle');
             let greetingIndex = Math.floor(Math.random() * greetings.length);

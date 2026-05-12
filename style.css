@@ -620,12 +620,12 @@ body.chat-started .input-disclaimer {
     font-weight: 400;
     color: #555555;
     cursor: pointer;
-    /* box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.05); */
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.2s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
 .mode-btn:hover {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .mode-btn--active {
@@ -637,7 +637,7 @@ body.chat-started .input-disclaimer {
 }
 
 .mode-btn--active:hover {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .greeting-chips {
@@ -659,12 +659,14 @@ body.chat-started .input-disclaimer {
     font-weight: 400;
     color: black;
     cursor: pointer;
-    transition: background 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
 .chip:hover {
     background: #f0f0f0;
     border-color: #777;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Messages --- */
@@ -687,13 +689,14 @@ body.chat-started .input-disclaimer {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: #111111;
+    white-space: pre-wrap;
 }
 
 .message-bot {
     align-self: flex-start;
     width: 100%;
     color: #111111;
-    white-space: pre-wrap;
+    white-space: normal;
     font-weight: 400;
     line-height: 1.6;
 }
@@ -706,30 +709,49 @@ body.chat-started .input-disclaimer {
     margin-bottom: 0;
 }
 
-.message-bot h1, .message-bot h2, .message-bot h3, .message-bot h4 {
+.message-bot h1,
+.message-bot h2,
+.message-bot h3,
+.message-bot h4 {
     margin-top: 16px;
     margin-bottom: 4px;
     font-weight: 600;
 }
 
-.message-bot h1:first-child, .message-bot h2:first-child, .message-bot h3:first-child, .message-bot h4:first-child {
+.message-bot h1:first-child,
+.message-bot h2:first-child,
+.message-bot h3:first-child,
+.message-bot h4:first-child {
     margin-top: 0;
 }
 
 .message-bot ul,
 .message-bot ol {
-    margin-top: -6px;
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 4px;
+    padding-left: 32px;
 }
 
 .message-bot li {
-    margin-bottom: 0;
-    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 .message-bot li p {
-    margin-bottom: 0;
+    margin: 0;
+}
+
+.message-bot li + li {
+    margin-top: 0;
+}
+
+.message-bot strong {
+    font-weight: 600;
+}
+
+.message-bot em {
+    font-style: italic;
 }
 
 .message-bot code {
@@ -820,16 +842,16 @@ body.chat-started .input-disclaimer {
     background-color: rgba(252, 251, 248, 0.4);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    /* box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.05); */
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
     transition: ease 0.2s;
 }
 
 .chat-input-inner:hover {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .chat-input-inner:focus-within {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Active chat state: input fixed at bottom, messages at top --- */
@@ -865,7 +887,7 @@ body.chat-started .chat-input-bar::before {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to bottom, rgba(252, 251, 248, 0) 0px, rgba(252, 251, 248, 1) 70px);
+    background: linear-gradient(to bottom, rgba(252, 251, 248, 0) 70px, rgba(252, 251, 248, 1) 70px);
     z-index: -1;
     pointer-events: none;
 }
