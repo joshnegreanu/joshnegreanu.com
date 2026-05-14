@@ -92,9 +92,34 @@ body {
 }
 
 .nav-links {
+    position: fixed;
+    top: 0;
+    right: 44px;
     display: flex;
     gap: 0;
     align-items: center;
+    z-index: 10;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    position: relative;
+    z-index: 11;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background-color: #111111;
+    transition: all 0.3s ease;
 }
 
 a.top_nav {
@@ -289,6 +314,10 @@ a.top_nav:hover::after {
         padding: 0 30px;
     }
 
+    .nav-links {
+        right: 30px;
+    }
+
     .intro-section {
         flex-direction: column;
         padding: 80px 30px;
@@ -351,8 +380,27 @@ a.top_nav:hover::after {
         padding: 14px 10px;
     }
 
+    .hamburger-btn {
+        display: flex;
+    }
+
     .nav-links {
-        gap: 0;
+        display: none;
+        position: fixed;
+        inset: 0;
+        right: 0;
+        z-index: 9;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: rgba(252, 251, 248, 0.75);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+
+    .nav-links.nav-open {
+        display: flex;
     }
 
     .intro-section {
@@ -388,20 +436,11 @@ a.top_nav:hover::after {
     }
 
     .botnav {
-        padding: 0 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-    }
-
-    .footer_text,
-    .footer_link {
-        padding: 8px 0;
-        font-size: 16px;
+        display: none;
     }
 
     .footer-spacer {
-        padding-bottom: 90px;
+        padding-bottom: 0;
     }
 
     .posts-section {

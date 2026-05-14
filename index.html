@@ -24,14 +24,19 @@
         <a href="https://joshnegreanu.com" class="top_nav nav-home">
             JOSH NEGREANU
         </a>
-        <div class="nav-links">
-            <a href="https://joshnegreanu.com/chat" class="top_nav">JOSHGPT</a>
-            <a href="https://joshnegreanu.com/files/resume.pdf" target="_blank" class="top_nav">RESUME</a>
-            <a href="https://linkedin.com/in/joshnegreanu/" target="_blank" class="top_nav">LINKEDIN</a>
-            <a href="https://github.com/JoshNegreanu" target="_blank" class="top_nav">GITHUB</a>
-            <a href="https://linktr.ee/joshnegreanu" target="_blank" class="top_nav">SOCIALS</a>
-        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+    <div class="nav-links" id="navLinks">
+        <a href="https://joshnegreanu.com/chat" class="top_nav">JOSHGPT</a>
+        <a href="https://joshnegreanu.com/files/resume.pdf" target="_blank" class="top_nav">RESUME</a>
+        <a href="https://linkedin.com/in/joshnegreanu/" target="_blank" class="top_nav">LINKEDIN</a>
+        <a href="https://github.com/JoshNegreanu" target="_blank" class="top_nav">GITHUB</a>
+        <a href="https://linktr.ee/joshnegreanu" target="_blank" class="top_nav">SOCIALS</a>
+    </div>
 
     <!-- Intro -->
     <div class="intro-section">
@@ -138,6 +143,12 @@
         <div class="footer_text">WEBSITE CODE IS ON GITHUB. LINK IS ABOVE. © 2026</div>
         <a class="footer_link" href="mailto:joshua.negreanu@gmail.com">joshua.negreanu@gmail.com</a>
     </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('nav-open');
+        }
+    </script>
 
 </body>
 
