@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'TiemposText';
-    src: url('fonts/TiemposText-Regular.otf') format('opentype');
+    src: url('fonts/PPRightSerifMono-Regular-BF660e236c35bea.otf') format('opentype');
     font-weight: 300 400;
     font-style: normal;
 }
@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: 'TiemposText';
-    src: url('fonts/TiemposText-Semibold.otf') format('opentype');
+    src: url('fonts/PPRightSerifMono-Regular-BF660e236c35bea.otf') format('opentype');
     font-weight: 600 700;
     font-style: normal;
 }
@@ -1014,4 +1014,13 @@ body.chat-started .chat-input-inner {
     .message {
         max-width: 100%;
     }
+}
+
+.couve-logo {
+    transition: transform 0.4s ease;
+    transform: rotate(0deg);
+}
+
+.couve-logo:hover {
+    transform: rotate(90deg);
 }

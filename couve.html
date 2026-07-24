@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoshGPT</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/joshgpt.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+    <script>
+        marked.use({
+            renderer: {
+                html(token) {
+                    const raw = typeof token === 'object' ? token.text : token;
+                    const escaped = raw
+                        .replace(/&/g, '&amp;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;');
+                    return '<pre><code>' + escaped + '</code></pre>\n';
+                }
+            }
+        });
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    </script>
+</head>
+
+<body class="chat-body">
+    <nav class="topnav">
+        <a href="https://joshnegreanu.com" class="top_nav nav-home">
+            JOSH NEGREANU
+        </a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <div class="nav-links" id="navLinks">
+        <a href="https://joshnegreanu.com/couve" class="top_nav">COUVE</a>
+        <a href="https://joshnegreanu.com/chat" class="top_nav">JOSHGPT</a>
+        <a href="https://joshnegreanu.com/files/resume.pdf" target="_blank" class="top_nav">RESUME</a>
+        <a href="https://linkedin.com/in/joshnegreanu/" target="_blank" class="top_nav">LINKEDIN</a>
+        <a href="https://github.com/JoshNegreanu" target="_blank" class="top_nav">GITHUB</a>
+        <a href="https://linktr.ee/joshnegreanu" target="_blank" class="top_nav">SOCIALS</a>
+    </div>
+
+    <img src="images/couve_logo_border.png" class="couve-logo" alt="Couve Logo" style="width: 100px; height: auto; margin-top: 20px;">
+
+    <br>
+
+    <div class="greeting-sub" style="width: 500px; text-align: center;">Front facing AI agents for architecture firms.
+        <br>
+        Check for updates on <a class="normal_link" style="font-family: 'Inter', sans-serif;" href="https://www.linkedin.com/company/couveai" target="_blank">LinkedIn</a>.
+    </div>
+
+    <div class="footer-spacer"></div>
+
+    <footer class="botnav">
+        <div class="footer_text">WEBSITE CODE IS ON GITHUB. LINK IS ABOVE. © 2026</div>
+        <a class="footer_link" href="mailto:joshua.negreanu@gmail.com">joshua.negreanu@gmail.com</a>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('nav-open');
+        }
+    </script>
+
+</body>
+
+</html>
