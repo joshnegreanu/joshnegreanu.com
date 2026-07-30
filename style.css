@@ -33,6 +33,30 @@
 }
 
 
+/* --- Theme --- */
+:root {
+    --bg: #fcfbf8;
+    --bg-rgb: 252, 251, 248;
+    --text: #111111;
+    --text-muted: #555555;
+    --text-faint: #888888;
+    --border: rgba(0, 0, 0, 0.05);
+    --border-strong: rgba(0, 0, 0, 0.1);
+    --border-heavy: rgba(0, 0, 0, 0.2);
+}
+
+/* Applied to <html> on pages that should render in dark mode (e.g. neuphorm.html) */
+html.dark-mode {
+    --bg: #111111;
+    --bg-rgb: 17, 17, 17;
+    --text: #f4f2ec;
+    --text-muted: #aaaaaa;
+    --text-faint: #888888;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.15);
+    --border-heavy: rgba(255, 255, 255, 0.25);
+}
+
 /* --- Reset & Base --- */
 html {
     scroll-behavior: smooth;
@@ -47,12 +71,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #fcfbf8;
+    background-color: var(--bg);
     background-image: radial-gradient(circle at 15% 50%, rgba(0, 0, 0, 0.02), transparent 25%),
         radial-gradient(circle at 85% 30%, rgba(0, 0, 0, 0.02), transparent 25%);
     font-family: 'TiemposText', serif;
     font-weight: 300;
-    color: #111111;
+    color: var(--text);
     line-height: 1.5;
     letter-spacing: -0.01em;
 }
@@ -68,17 +92,17 @@ body {
     justify-content: space-between;
     padding: 0 44px;
     transition: all 0.3s ease;
-    background-color: rgba(252, 251, 248, 0.4);
+    background-color: rgba(var(--bg-rgb), 0.4);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border);
 }
 
 .nav-home {
     display: flex;
     /* flex-direction: column; */
     text-decoration: none;
-    color: #111111;
+    color: var(--text);
     /* padding: 0 12px; */
     font-size: 16px;
     font-family: 'Inter', sans-serif;
@@ -118,7 +142,7 @@ body {
     display: block;
     width: 22px;
     height: 1.5px;
-    background-color: #111111;
+    background-color: var(--text);
     transition: all 0.3s ease;
 }
 
@@ -127,7 +151,7 @@ a.top_nav {
     font-weight: 400;
     font-size: 16px;
     padding: 20px 16px;
-    color: #111111;
+    color: var(--text);
     text-decoration: none;
     position: relative;
     /* white-space: nowrap; */
@@ -141,12 +165,12 @@ a.top_nav::after {
     right: 16px;
     bottom: 18px;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--border-strong);
     transition: background-color 0.3s ease;
 }
 
 a.top_nav:hover::after {
-    background-color: rgba(0, 0, 0, 1.0);
+    background-color: var(--text);
 }
 
 /* --- Links --- */
@@ -154,15 +178,15 @@ a.top_nav:hover::after {
     /* font-family: 'TiemposText', serif; */
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #111111;
+    color: var(--text);
     font-size: inherit;
     text-decoration: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--border-heavy);
     transition: border-color 0.3s ease;
 }
 
 .normal_link:hover {
-    border-bottom-color: #111111;
+    border-bottom-color: var(--text);
 }
 
 /* --- Intro Section --- */
@@ -266,16 +290,16 @@ a.top_nav:hover::after {
     align-items: center;
     justify-content: space-between;
     padding: 0 60px;
-    background-color: rgba(252, 251, 248, 0.4);
+    background-color: rgba(var(--bg-rgb), 0.4);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--border);
 }
 
 .footer_text {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #555555;
+    color: var(--text-muted);
     font-size: 16px;
     padding: 20px 0;
     /* letter-spacing: 0.04em; */
@@ -284,7 +308,7 @@ a.top_nav:hover::after {
 .footer_link {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #111111;
+    color: var(--text);
     font-size: 16px;
     text-decoration: none;
     padding: 20px 0;
@@ -300,12 +324,12 @@ a.top_nav:hover::after {
     right: 0;
     bottom: 18px;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--border-strong);
     transition: background-color 0.3s ease;
 }
 
 .footer_link:hover::after {
-    background-color: rgba(0, 0, 0, 1.0);
+    background-color: var(--text);
 }
 
 /* --- Responsive: Tablet --- */
@@ -394,7 +418,7 @@ a.top_nav:hover::after {
         align-items: center;
         justify-content: center;
         gap: 8px;
-        background-color: rgba(252, 251, 248, 0.75);
+        background-color: rgba(var(--bg-rgb), 0.75);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
     }
@@ -1023,4 +1047,17 @@ body.chat-started .chat-input-inner {
 
 .couve-logo:hover {
     transform: rotate(90deg);
+}
+
+.circle {
+	--circle-size: 240px;
+	position: fixed;
+	height: var(--circle-size);
+	width: var(--circle-size);
+	border-radius: 50%;
+	top: calc(50vh - var(--circle-size)/2);
+	left: calc(50vw - var(--circle-size)/2);
+	pointer-events: none;
+	z-index: -1;
+	background-color: #f8f6ee;
 }
