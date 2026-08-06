@@ -93,7 +93,7 @@ main {
     justify-content: space-between;
     padding: 0 44px;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(var(--bg-rgb), 0.18));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.025), rgba(var(--bg-rgb), 0.18));
     backdrop-filter: blur(14px) saturate(125%);
     -webkit-backdrop-filter: blur(14px) saturate(125%);
     border-bottom: 1px solid var(--border-strong);

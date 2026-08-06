@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Josh Negreanu',
-  icons: { icon: '/images/logo.ico' },
+  icons: { icon: '/images/favicon.ico' },
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

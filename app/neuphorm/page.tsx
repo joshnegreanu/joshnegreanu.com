@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import type { Metadata } from 'next'
 import Nav from '../Nav'
 import CursorCircle from './CursorCircle'
 import './neuphorm.css'
