@@ -1,0 +1,23 @@
+.neuphorm-page { min-height: 100vh; background: #111; color: #f8f6ee; overflow: hidden; }
+.neuphorm-page .topnav, .neuphorm-page .botnav { background-color: rgba(17,17,17,.16); }
+.neuphorm-content { position: relative; z-index: 1; width: 100%; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 180px 60px 120px; }
+.neuphorm-content h1 { position: fixed; top: 50%; left: 50%; z-index: 1; width: max-content; margin: 0; transform: translate(-50%, -50%); color: #f8f6ee; font-family: Inter, sans-serif; font-size: 50px; font-weight: 700; line-height: .85; text-align: left; }
+.neuphorm-content p { position: fixed; top: calc(50% + 125px); left: 50%; z-index: 1; width: 400px; margin: 0; transform: translateX(-50%); color: #aaa; text-align: center; font-family: Inter, sans-serif; font-size: 16px; }
+.neuphorm-circle { --circle-size: 240px; position: fixed; top: calc(50vh - var(--circle-size) / 2); left: calc(50vw - var(--circle-size) / 2); width: var(--circle-size); height: var(--circle-size); border-radius: 50%; pointer-events: none; z-index: 0; transform-origin: center; }
+.neuphorm-page .footer-spacer { padding-bottom: 70px; }
+@media (max-width: 960px) {
+    .neuphorm-content h1 { font-size: 44px; }
+    .neuphorm-content p { top: calc(50% + 115px); }
+}
+
+@media (max-width: 600px) {
+    .neuphorm-content { padding: 140px 20px 100px; }
+    .neuphorm-content h1 { font-size: 38px; }
+    .neuphorm-content p { top: calc(50% + 100px); width: calc(100% - 40px); }
+    .neuphorm-page .botnav { display: none; }
+    .neuphorm-page .footer-spacer { padding-bottom: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .neuphorm-circle { display: none; }
+}
